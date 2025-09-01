@@ -1,0 +1,22 @@
+---
+title: "short_summary"
+format: pdf
+---
+
+<!-- Canadian Campus Well-Being Survey -->
+
+# About the XX-(NAME)
+
+The XX-(name) seeks to XX-(purpose)
+
+XX-(administration group, channel, dates, time to complete)
+
+XX-(incentives)
+
+XX-(numbers invited, completed, descriptive stats)
+
+
+
+# Key Findings
+
+# Demographics and Characteristics

@@ -1,0 +1,233 @@
+---
+title: "Sample Socia Report"
+subtitle: "A Demo Prepared For Bob Loblaw's Law Blog"
+date: "`r Sys.Date()`"
+author: "Dallas Novakowski, Ph.D."
+format:
+  pdf:
+    # dcumentclass: tufte-handout
+    include-in-header: resources/tufte_helper.tex
+    # lof: true
+execute: 
+  echo: false
+cap-location: margin
+reference-location: margin
+citation-location: margin
+bibliography: resources/references.bib
+---
+
+
+
+```{r, echo=FALSE, message=FALSE}
+library(tidyverse)
+library(knitr)
+
+
+source("../load_data.R")
+
+#| echo: false
+#| message: false
+```
+
+
+
+\newpage
+\newgeometry{left=0.75in, right=0.75in, top=1in, bottom=1in}
+
+
+
+\newpage
+
+
+  
+# Executive Summary
+
+<!-- This report presents findings from n = XX individuals retained for analysis XX -->
+
+Socia – Research and Strategy was engaged by Bob Loblaw’s Law Blog to assess the effectiveness of its merchandising efforts across three key retail locations. A total of 600 customer responses were collected, allowing for analysis by both store location and customer segment.
+
+Findings indicate that Store 1 consistently outperformed Stores 2 and 3 in terms of customer satisfaction, suggesting that its merchandising approach is resonating most strongly with shoppers. Store 2 followed, while Store 3 trailed behind. Importantly, while no clear or consistent differences emerged across customer segments at Stores 1 and 2, results at Store 3 showed a more pronounced divergence: premium shoppers at Store 3 reported notably lower satisfaction than mid-range shoppers.
+
+This trend highlights a potential challenge in engaging higher-spending customers at Store 3, where the merchandising strategy may not be aligned with premium expectations. Conversely, the absence of strong segment-based differences at the other stores suggests that their merchandising efforts are achieving a more balanced appeal.
+
+Taken together, the results suggest two strategic priorities:
+
+Scaling the strengths of Store 1’s merchandising model to ensure best practices are consistently applied across the chain.
+
+Addressing the specific dissatisfaction among premium shoppers at Store 3, where targeted improvements could unlock greater loyalty and spending potential from a high-value segment.
+
+These insights provide Bob Loblaw’s Law Blog with actionable direction for refining its merchandising approach, improving overall satisfaction, and ensuring the brand’s retail presence fully supports its broader business objectives.
+
+\newpage
+
+
+
+\listoffigures
+
+<!-- \listoftables -->
+
+
+
+\newpage
+
+
+
+\newpage
+
+\raggedright
+
+# Introduction
+
+Socia – Research and Strategy was contracted by Bob Loblaw’s Law Blog to conduct a customer satisfaction survey aimed at evaluating the effectiveness of the firm’s merchandising efforts across its three primary retail locations. While the law blog itself remains a unique brand presence, Bob Loblaw recognized that “there’s always money in the merch stand,” and sought evidence-based insights to determine whether current strategies were truly resonating with customers.
+
+The project was designed not only to gauge overall satisfaction, but also to identify key areas for improvement in customer engagement, product appeal, and the broader shopping experience. Given that consumer preferences can shift as unpredictably as family dynamics, this research was intended to provide a more structured, data-driven understanding—without relying on loose anecdotes, magic tricks, or legal loopholes.
+
+Ultimately, the survey findings will help Bob Loblaw’s Law Blog refine its merchandising strategy, strengthen its customer relationships, and ensure that future decisions aren’t simply “illusions” but grounded in actionable evidence.
+
+## Methods
+
+### Study Design
+
+
+<!-- \vspace{-1em} -->
+
+
+This study employed a cross-sectional survey design to measure customer satisfaction across three retail locations. The goal was to obtain a representative snapshot of customer perceptions regarding service quality, product availability, and overall shopping experience.
+
+<!-- \vspace{-1em} -->
+
+
+### Data Collection
+
+<!-- \vspace{-1em} -->
+
+
+Data were collected through a structured questionnaire administered between [Month, Year] and [Month, Year]. Customers were invited to participate immediately following their shopping experience. The survey was available in both paper and digital formats to increase accessibility and convenience.
+
+<!-- \vspace{-1em} -->
+
+
+
+### Sample
+
+<!-- \vspace{-1em} -->
+
+
+A total of 600 valid responses were collected, with approximately equal representation from each of the three store locations (Store 1: n = 216; Store 2: n = 171; Store 3: n = 213). Participants were adult customers (18 years or older) who had completed a transaction during the data collection period. No personal identifying information was collected.
+
+<!-- \vspace{-1em} -->
+
+
+### Measures
+
+<!-- \vspace{-1em} -->
+
+
+The survey included items covering:
+
+- Overall Satisfaction (5-point Likert scale, from “Very Dissatisfied” to “Very Satisfied”)
+- Service Quality (courtesy, knowledge, responsiveness of staff)
+- Product Availability (selection, stock levels)
+- Store Environment (cleanliness, layout, ease of navigation)
+- Likelihood to Recommend (Net Promoter Score format)
+
+
+
+\restoregeometry
+
+
+\newpage
+
+# Results
+
+<!-- ### Convocation Information -->
+
+
+  \figuremarginnote{Customer Satisfaction, Grouped by Store and Customer Segment}{Respondents reported being most satisfied from Store 1, followed by Store 2 then 3. There were no consistent trends in customer satisfaction across customer segments. On a trend basis, premium shoppers at Store 3 were less satisfied than mid-range shoppers at the same store.  \\[3pt]
+  \noindent\rule{\marginparwidth - \marginparsep - 2\fboxsep}{0.4pt}\\[3pt]
+  (n = `r nrow(survey_data)`) \quad
+  \underline{PROMPT}: "How satisfied were you with your visit today?" \\[6pt]
+  \underline{NOTE}: The coloured "humps" show the smoothed distribution of individual survey responses. The “n = x” boxes indicate the number of valid responses per category. Black dots represent mean values, and black bars show 95\% confidence intervals.\\[3pt]
+  }
+  \includegraphics[width=\textwidth]{../fig/2025/demo_2025_satisfactionscore_store_customersegment_shadeplot.png}
+  
+  \vspace{2em}
+  
+
+\newpage
+
+## Themes in Open-Text Data
+
+
+\rrmargintext{Store 1 seen as reliable and well-organized; perceived as the benchmark store}
+
+\vspace{-.5em}
+
+- "Store 1 always has what I need, and I don’t have to waste time looking for it."
+- "It feels like Store 1 knows what customers actually want."
+- "Employees at Store 1 seem more confident and helpful compared to the others."
+
+\vspace{.5em}
+
+\noindent Store 1 emerged as the clear benchmark. Customers described it as reliable, efficient, and well-aligned with their needs. Importantly, this was not framed as exceptional service, but rather the **consistent absence of friction**—a strategic advantage in customer retention. From a business standpoint, Store 1’s model could serve as the operational template for scaling improvements across other locations.
+
+\vspace{3em}
+
+
+\rrmargintext{Store 2 feedback was mixed; valued when organized, criticized when inconsistent}
+
+\vspace{-.5em}
+
+- "Sometimes Store 2 is great, sometimes it feels chaotic."
+- "I can’t predict what the experience will be like at Store 2."
+- "Store 2 feels like it depends on who is working that day."
+
+\vspace{.5em}
+
+\noindent Store 2 lacked a stable customer identity. The inconsistency theme suggests operational variability tied to staffing or management, leading to unpredictable experiences. While this has not yet driven strong dissatisfaction, the **lack of reliability creates vulnerability to competitors**. Strategically, addressing consistency at Store 2 would be low-hanging fruit: standardizing staff training, layout, and merchandising would stabilize perceptions.
+
+\vspace{3em}
+
+
+\rrmargintext{Premium shoppers at Store 3 were disappointed; mid-range shoppers were more neutral}
+
+\vspace{-.5em}
+
+- "I expected more from Store 3, given the prices."
+- "As a premium customer, Store 3 just doesn’t feel worth it."
+- "I shop mid-range, and Store 3 is fine for me—but it’s nothing special."
+- "Store 3 is convenient, but nothing about it feels premium."
+
+\vspace{.5em}
+
+\noindent The sharpest divergence appeared at Store 3, where premium shoppers expressed disappointment relative to expectations. Their comments highlighted a **gap between price positioning and experience delivery**: higher prices did not correspond with perceived higher quality, exclusivity, or service. Mid-range shoppers, meanwhile, reported neutral-to-acceptable experiences, indicating the store meets baseline needs but underdelivers for the more lucrative premium segment. This suggests a strategic crossroad: either elevate Store 3’s premium offering to match its positioning, or recalibrate expectations and target a mid-range base more explicitly.
+
+\vspace{3em}
+
+
+\rrmargintext{Cross-store insight: reliability drives satisfaction more than novelty}
+
+\vspace{-.5em}
+
+- "I don’t need bells and whistles, I just want to know what I’m getting."
+- "Consistency matters more than promotions."
+
+\vspace{.5em}
+
+\noindent Across stores, customers emphasized **predictability and reliability** as stronger satisfaction drivers than novelty or promotions. While promotions and merchandising play a role in attracting attention, the sustained driver of satisfaction is the ability to meet core expectations consistently. Strategically, this means investments in **operational discipline and service reliability** may yield greater returns than introducing new, flashy campaigns that don’t address underlying pain points.
+
+\newpage
+\newgeometry{left=0.75in, right=0.75in, top=1in, bottom=1in}
+
+
+## Conclusion
+
+- Store 1 consistently sets the benchmark for customer satisfaction through reliability and predictable service.
+- Store 2 demonstrates potential, but inconsistent execution creates variability in the customer experience.
+- Store 3 underdelivers for premium shoppers, highlighting a misalignment between pricing, positioning, and perceived value.
+- Across all locations, reliability and consistency drive satisfaction more strongly than novelty or promotional efforts.
+
+
+\vspace{.5em}
+
+\noindent These findings provide actionable insights for Bob Loblaw’s Law Blog to optimize its merchandising strategy. Specifically, best practices from Store 1 can be codified and scaled to other locations, operational inconsistencies at Store 2 can be addressed through training and standardized processes, and Store 3’s premium experience can be recalibrated to meet customer expectations or more clearly target a mid-range audience. By prioritizing consistency, aligning store positioning with customer expectations, and addressing the specific gaps identified, Bob Loblaw’s merchandising strategy can be strengthened to improve customer satisfaction, loyalty, and ultimately, sales performance.

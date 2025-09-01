@@ -1,0 +1,93 @@
+
+\usepackage{fontspec}
+\usepackage{indentfirst}
+\setlength{\parindent}{1cm} % Set the paragraph indent
+\usepackage{hyperref}
+
+% Redefine section and subsection commands to adjust heading sizes
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+    {-1ex \@plus -1ex \@minus -.2ex}%
+    {1ex \@plus.2ex}%
+    {\centering\large\bfseries}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+    {-1ex\@plus -1ex \@minus -.2ex}%
+    {1ex \@plus .2ex}%
+    {\raggedright\large\bfseries}}
+\makeatother
+
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}  %# Required for positioning the image.
+\AddToHook{shipout/foreground}{
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[black,rotate=45,scale=12,opacity=0.05] at (current page.center) {Confidential}; 
+  \end{tikzpicture}
+}
+
+
+\makeatletter  %# Customizing the title page.
+\renewcommand{\maketitle}{
+  \begin{titlepage}
+    \centering
+    \vspace*{\fill}
+    \begin{tikzpicture}[remember picture,overlay]
+      \centering
+    \end{tikzpicture}
+    \Huge\textbf{\@title} \\[1cm]  %# Title formatting.
+    \Large\textbf{\@subtitle} \\[1cm]  %# Subtitle formatting.
+    \textbf{\@date} \\[1cm]  %# Date formatting.
+    \vspace*{\fill}
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[anchor=south east,inner sep=0] at (current page.south east) {\includegraphics[width=15cm]{../fig/socia_logo.png}};  %# Logo positioning.
+    \end{tikzpicture}
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[anchor=south west, xshift=40pt, yshift=150pt] at (current page.south west) {  %# Adjust xshift and yshift as needed.
+        \begin{minipage}[t]{0.9\textwidth}  %# Adjust width as needed.
+          \raggedright\Large\textbf{Author:} Dallas Novakowski, Ph.D. \\[0.0cm]  %# Author name.
+        \end{minipage}
+      };
+    \end{tikzpicture}
+  \end{titlepage}
+  \newpage
+  % \section*{Executive Summary}
+
+}
+
+
+\makeatother
+\usepackage{scrlayer-scrpage}  %# For customizing page headers and footers.
+\cohead[]{\vspace*{-.5cm}\includegraphics[width=7cm]{../fig/socia_logo.png}}  %# Logo in the header.
+\pagenumbering{arabic}  %# Page numbering style.
+
+\ifoot[]{For internal use only}  %# Footer information.
+\cfoot[]{Socia Research and Strategy}  %# Footer information.
+\ofoot[\pagemark]{\pagemark}  %# Page number formatting.
+\setkomafont{pagefoot}{\footnotesize}  %# Font size for footer.
+\usepackage[left=1.5cm,top=3cm,right=1.5cm,bottom=2.5cm]{geometry}        
+\usepackage[absolute,overlay]{textpos}  %# For positioning images.
+\usepackage{caption} %# For customizing captions.
+\usepackage[labelfont=bf]{caption}
+
+%% Use some custom fonts
+\setsansfont{OpenSans}[
+    Path=OpenSans/,
+    Scale=0.9,
+    Extension = .ttf,
+    UprightFont=*-Regular,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    ]
+\setmainfont{OpenSans}[
+    Path=OpenSans/,
+    Scale=0.9,
+    Extension = .ttf,
+    UprightFont=*-Regular,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    ]
+    
+\usepackage{etoolbox}
+\AtBeginEnvironment{figure}{\addtocontents{lof}{\vspace{5pt}}}
+
+\usepackage[none]{hyphenat}
